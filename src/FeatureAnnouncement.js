@@ -15,7 +15,7 @@ function FeatureAnnouncement() {
 
     // Set up WebSocket connection for new features
     useEffect(() => {
-        const ws = new WebSocket('ws://https://feature-announcement-backend.onrender.com');
+        const ws = new WebSocket('wss://feature-announcement-backend.onrender.com/ws');
 
         ws.onmessage = (event) => {
             const feature = JSON.parse(event.data);
