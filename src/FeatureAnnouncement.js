@@ -6,7 +6,7 @@ function FeatureAnnouncement() {
 
     // Fetch existing features when the app loads
     useEffect(() => {
-        fetch("/features")
+        fetch("https://feature-announcement-backend.onrender.com/features")
             .then((res) => res.json())
             .then((data) => {
                 setFeatures(data); // Set the existing features
